@@ -1,0 +1,18 @@
+
+Your task is to calculate the number of trailing zeros in the factorial n!.
+
+#include<bits/stdc++.h>
+using namespace std;
+#define mod 1000000007
+#define lli long long int
+ 
+int main()
+{
+    lli n,ans=0;
+    cin>>n;
+   	for(lli i=5;i<=n;i*=5){
+   		ans+=(n/i);
+   	}
+   	cout<<ans<<endl;
+}
+ 
