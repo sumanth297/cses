@@ -1,0 +1,21 @@
+Your task is to count for k=1,2,…,n
+the number of ways two knights can be placed on a k×k chessboard so that they do not attack each other.
+
+Total poss=n^2 C 2
+Collisions 4*(n-1)*(n-2)
+https://math.stackexchange.com/questions/3266257/number-of-ways-two-knights-can-be-placed-such-that-they-dont-attack
+
+#include<bits/stdc++.h>
+using namespace std;
+#define mod 1000000007
+#define lli long long int
+ 
+int main()
+{
+    lli n;
+    cin>>n;
+    for(lli i=1;i<=n;i++){
+    	cout<<((i*i*(i*i-1))/2)-4*(i-1)*(i-2)<<endl;
+    }
+}
+ 
