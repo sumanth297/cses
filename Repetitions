@@ -1,0 +1,24 @@
+a string consisting of characters A, C, G, and T. Your task is to find the longest repetition in the sequence.
+This is a maximum-length substring containing only one type of character.
+
+#include<bits/stdc++.h>
+using namespace std;
+#define mod 1000000007
+#define lli long long int
+ 
+int main()
+{
+    string s;
+    cin>>s;
+    lli cur=1,maxi=1;
+    for(int i=1;i<s.length();i++){
+    	if(s[i]==s[i-1]){
+    		cur++;
+    	}else{
+    		maxi=max(cur,maxi);
+    		cur=1;
+    	}
+    }
+    maxi=max(cur,maxi);
+    cout<<maxi<<endl;
+}
